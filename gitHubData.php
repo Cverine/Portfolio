@@ -38,7 +38,7 @@ class GitHubData
 
         $result = curl_exec($ch);
 
-        if (curl_errno($ch)) {
+        if(curl_errno($ch)) {
             echo 'Error:' . curl_error($ch);
         }
 

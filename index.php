@@ -13,8 +13,7 @@
 
         <div class="transparent"><span class="hidden-initial">S</span>éverine <span class="initial">L</span>ab<span class="initial">.</span>
             <span class="initial">D</span>éveloppeuse <span class="initial">W</span>eb <span class="initial">P</span>HP/<span class="initial">S</span>ymfony
-            </br><span class="initial">A</span>ime aussi : <span class="initial">C</span>SS <span class="initial">+</span> la <span class="initial">C</span>artographie
-<!--            </br><span class="initial">V</span>oici mon <span class="initial">P</span>ortfolio-->
+            <br><span class="initial">A</span>ime aussi : <span class="initial">C</span>SS <span class="initial">+</span> la <span class="initial">C</span>artographie
         </div>
         <footer class="index-footer">
             <div class="index-footer-projects"><a  href="projects.php">Projets</a></div>
