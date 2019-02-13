@@ -4,6 +4,8 @@
 include('components/head.html');
 ?>
 <body>
+<?php include('components/header.html'); ?>
+<div id="cursor"></div>
 <div class="about-wrapper">
     <h2 class="about-title">à propos</h2>
     <div class="about-text">
@@ -23,21 +25,23 @@ include('components/head.html');
     <h2 class="contact-title">me contacter</h2>
     <div class="contact-text">
         <ul>
-            <li><a href="https://www.linkedin.com/in/severinelabayle/" target="_blank">Linkedin</a></li>
-            <li><a href="https://github.com/Cverine" target="_blank">GitHub</a></li>
-            <li><a href="https://twitter.com/cverinelab" target="_blank">Twitter</a></li>
-            <li class="to-copy">severinelab@protonmail.com</li>
+            <li><a href="https://www.linkedin.com/in/severinelabayle/" target="_blank">Linkedin <i class="fab fa-linkedin"></i></a></li>
+            <li><a href="https://github.com/Cverine" target="_blank">GitHub <i class="fab fa-github-square"></i></a></li>
+            <li><a href="https://twitter.com/cverinelab" target="_blank">Twitter <i class="fab fa-twitter-square"></i></a></li>
+        </ul>
+    </div>
+    <div class="email">
+        <ul>
+            <li class="to-copy"><i class="fas fa-envelope"></i>  severinelab@protonmail.com</li>
             <li class="tooltip">Cliquez sur l'adresse pour la copier</li>
         </ul>
     </div>
     <footer class="footer">
         <div class="footer-close"><a  href="projects.php">Projets</a></div>
-        <div class="footer-about" ><a href="index.php">Fermer</a></div>
+        <div class="footer-about" ><a href="index.php">Accueil</a></div>
     </footer>
 </div>
-<?php
-include('components/script.html');
-?>
+<?php include('components/script.html'); ?>
 </body>
 </html>
 

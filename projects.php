@@ -11,6 +11,8 @@ $projects = $connexion->getGitHubData($apiKey);
 include('components/head.html');
 ?>
 <body>
+<?php include('components/header.html'); ?>
+<div id="cursor"></div>
 <div class="project-wrapper">
     <h2>PROJETS</h2>
         <div class="projects-list">
@@ -23,6 +25,7 @@ include('components/head.html');
         </div>
         <?php foreach ($projects as $project) {?>
             <div id="show-<?php echo $project['name'];?>" class="projects-description">
+               <div class="back-to-list"><a  href="projects.php"><i class="fas fa-long-arrow-alt-left"></i>  Back to list</a></div>
                 <h2><?php echo $project['name'];?></h2>
                 <p class="description"><?php echo $project['description'];?></p>
                 <p class="commit-date">Pushed at : <?php echo $project['pushed_at'];?></p>
@@ -64,13 +67,11 @@ include('components/head.html');
             </div>
         </div>
     <footer class="footer">
-        <div class="footer-close"><a  href="index.php">Retour</a></div>
+        <div class="footer-close"><a  href="index.php">Accueil</a></div>
         <div class="footer-about" ><a href="about.php">A propos</a></div>
     </footer>
 </div>
-<?php
-include('components/script.html');
-?>
+<?php include('components/script.html'); ?>
 
 </body>
 </html>

@@ -1,22 +1,23 @@
-//$colorB: #120C53;
 $colorD: #c61624;
 $colorA: #E5DECE;
 $colorB: #05161E;
-$colorC: #D0A00E;
 $colorE: #b7b1a4;
-$colorBD: #262840;
 
-
-$border1: 1px solid black;
-$border2: 1px solid white;
-$border3: 1px solid red;
-$border4: 1px solid green;
 $font: courier-std, monospace;
 
 html, body {
   width: 100%;
   height: 100%;
   background: $colorA;
+  cursor: none;
+}
+
+#cursor {
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  background-color: $colorB;
+  position: absolute;
 }
 
 h1 {
@@ -27,15 +28,22 @@ h1 {
   font-family: $font;
   font-weight: 600;
   font-style: normal;
-  font-size: 9em;
+  font-size: 8em;
   line-height: 90%;
 }
 
-.home-wrapper {
+#home-wrapper {
   min-height: 100%;
   display: grid;
   grid-template-columns: 5% 95%;
   grid-template-rows: auto 1fr auto;
+}
+
+.black {
+  background-color: $colorB;
+  .transparent, .initial, .index-footer a {
+    color: $colorA;
+  }
 }
 
 .blinking {
@@ -49,25 +57,6 @@ h1 {
 @-webkit-keyframes mymove {
   from {opacity:0;}
   to {opacity: 1;}
-}
-
-.blinking:hover {
-  background-color: $colorB;
-  color: $colorA;
-  ~ .transparent {
-    background-color: $colorB;
-    color: $colorA;
-    .initial {
-      background-color: $colorB;
-      color: $colorA;
-    }
-  }
-  ~ .index-footer {
-    background-color: $colorB !important;
-    a {
-      color: $colorA !important;
-    }
-  }
 }
 
 .transparent {
@@ -89,11 +78,18 @@ h1 {
   display: grid;
   grid-template-columns: 50% 50%;
   a {
-    color: $colorB;
+    color: transparent;
     text-decoration: none;
   }
   .index-footer-about {
     text-align: right;
+  }
+}
+
+.index-footer-projects:hover, .index-footer-about:hover {
+  a, .initial {
+    color: $colorD;
+    font-weight: 800;
   }
 }
 
@@ -122,6 +118,13 @@ h1 {
   }
 }
 
+.project-item:hover {
+  background-color: $colorD;
+  color: $colorA;
+  font-weight: 700;
+  width: 50%;
+}
+
 .projects-description {
   grid-row: 2 / 3;
   display: none;
@@ -132,6 +135,15 @@ h1 {
   padding: 5px;
   .description {
     font-size: 1.5em;
+  }
+  .back-to-list {
+    visibility: hidden;
+    text-align: left !important;
+    a {
+      color: $colorD;
+      font-size: 1.2em !important;
+      text-decoration: none;
+    }
   }
 }
 
@@ -161,6 +173,11 @@ h1 {
     color: $colorB;
     margin-left: 20px;
   }
+  a:hover {
+    background-color: $colorB;
+    border: 3px solid $colorD;
+    color: $colorD;
+  }
 }
 
 img {
@@ -171,7 +188,6 @@ img {
 
 .stats:hover {
   width: 100%;
-
 }
 
 .footer {
@@ -232,15 +248,12 @@ img {
   .contact-text {
     grid-column: 1/2;
     grid-row: 3/4;
-    transform:  rotate(-30deg);
-    width: 50%;
-    height: 20%;
-    //border-left: 3px solid $colorB;
-    margin-left: 50%;
-    margin-top: 0;
+    transform: rotate(-90deg);
+    margin-left: 60%;
+    padding-bottom: 50px;
     li {
       list-style-type: none;
-      line-height: 50px;
+      line-height: 70px;
     }
     a {
       text-decoration: none;
@@ -248,17 +261,34 @@ img {
       font-size: 2em;
     }
     a:hover {
-      background-color: $colorD;
-      color: $colorA;
-      font-weight: 700;
+      font-weight: 800;
     }
-
+    i {
+      transform: rotate(90deg);
+      color: $colorD;
+    }
+  }
+  .email {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    ul {
+      position: absolute;
+      bottom: 100px;
+    }
+    li {
+      list-style-type: none;
+    }
+    i {
+      color: $colorD;
+    }
     .to-copy {
       font-size: 2em;
     }
+
     .tooltip {
       opacity: 0;
     }
+
     .to-copy:hover {
       ~ .tooltip {
         opacity: 1;
@@ -272,3 +302,121 @@ img {
   }
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  .transparent, .blinking, .index-footer, .footer {
+    font-size: 2em;
+    line-height: 2;
+  }
+
+  #cursor {
+    display: none;
+  }
+
+  .transparent, .index-footer-about a, .index-footer-projects a{
+    color: $colorB;
+  }
+
+  .project-wrapper {
+    grid-template-columns: 1fr;
+    h2 {
+      font-size: 2em;
+    }
+    .projects-list {
+      grid-column: 1 / 2;
+      grid-row: 2 / 3;
+      margin-left: 0;
+        li {
+          font-size: 1.5em;
+          font-weight: 600;
+        }
+      }
+    .project-item:hover {
+      width: 100%;
+    }
+  }
+  .projects-description {
+    grid-column: 1 / 2;
+    height: 100%;
+    width: 95%;
+    margin: auto;
+    text-align: center;
+    h2 {
+      font-size: 1.5em;
+    }
+    .description {
+      font-size: 1em;
+    }
+    .back-to-list {
+      visibility: visible;
+    }
+  }
+  .tags ul li {
+    margin: auto;
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid $colorA;
+  }
+
+  .source {
+    a {
+      padding: 5px;
+      font-size: 1em;
+      margin: 10px auto auto auto;
+    }
+  }
+
+  .about-wrapper {
+    grid-template-columns: 100%;
+    grid-template-rows: auto 1fr 1fr auto;
+    .about-title {
+      font-size: 2em;
+    }
+    .about-text {
+      width: 90%;
+      font-size: 1em;
+      line-height: 1.2;
+      grid-column: 1/2;
+      margin-left: 0;
+      a {
+        padding-left: 0;
+        padding-right: 0;
+        color: $colorB;
+        background-color: transparent;
+        font-weight: 700;
+      }
+      span {
+        font-weight: 700;
+      }
+    }
+    .contact-title {
+      font-size: 2em;
+    }
+    .contact-text {
+      grid-column: 1/2;
+      grid-row: 3/4;
+      transform: none;
+      margin-left: 0;
+      margin-top: 100px;
+      li {
+        line-height: 50px;
+      }
+      a {
+        font-size: 1.5em;
+      }
+      i {
+        transform: none;
+      }
+    }
+    .email {
+      grid-column: 1/2;
+      grid-row: 4/5;
+      ul {
+        position: initial;
+        margin-top: -150px;
+      }
+      .to-copy {
+        font-size: 1.2em;
+      }
+    }
+  }
+}
