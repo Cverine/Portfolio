@@ -5,7 +5,6 @@ include('components/head.html');
 ?>
 <body>
 <?php include('components/header.html'); ?>
-<div id="cursor"></div>
 <div class="about-wrapper">
     <h2 class="about-title">à propos</h2>
     <div class="about-text">

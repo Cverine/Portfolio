@@ -7,12 +7,9 @@ $projects = $connexion->getGitHubData($apiKey);
 
 <!DOCTYPE html>
 <html lang="fr">
-<?php
-include('components/head.html');
-?>
+<?php include('components/head.html'); ?>
 <body>
 <?php include('components/header.html'); ?>
-<div id="cursor"></div>
 <div class="project-wrapper">
     <h2>PROJETS</h2>
         <div class="projects-list">
@@ -36,9 +33,9 @@ include('components/head.html');
                     </ul>
                 </div>
                 <div class="source">
-                    <a href="<?php echo $project['html_url'];?>">Go to GitHub</a>
+                    <a href="<?php echo $project['html_url'];?>" target="_blank">Go to GitHub</a>
                     <?php if(!empty($project['website'])) {?>
-                        <a href="<?php echo $project['website'];?>">See project</a>
+                        <a href="<?php echo $project['website'];?>" target="_blank">See project</a>
                     <?php } ?>
                 </div>
                 <div class="pictures">
@@ -47,6 +44,7 @@ include('components/head.html');
             </div>
         <?php } ?>
         <div id="show-stats" class="projects-description">
+            <div class="back-to-list"><a  href="projects.php"><i class="fas fa-long-arrow-alt-left"></i>  Back to list</a></div>
             <h2>Stats</h2>
             <p class="description">I worked on Stats during my internship at GFI Informatique. Stats is an app which shows the TMA department's activity with charts. Data are imported every day from the ticketing tool and filters allow to show data with different granularity</p>
             <p class="commit-date">Developped : from Feb-2018 to Jun-2018</p>

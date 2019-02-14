@@ -2,16 +2,7 @@ $(document).ready(function(){
     $('.initial, .blinking').hover(
         function(){ $('#home-wrapper').addClass('black');
         },
-        function(){ $('#home-wrapper').removeClass('black');
-        },
     );
-
-    $(document).on('mousemove', function(e) {
-        $('#cursor').css({
-            left: e.pageX,
-            top: e.pageY
-        });
-    });
 
     $(".project-item").click(function(){
         var getElem = $(this).attr("id");
