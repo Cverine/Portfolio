@@ -69,7 +69,7 @@ $projects = $connexion->getGitHubData($apiKey);
         <div class="footer-about" ><a href="about.php">A propos</a></div>
     </footer>
 </div>
-<?php include('components/script.html'); ?>
+<script src='script/script.js'></script>
 
 </body>
 </html>

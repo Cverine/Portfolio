@@ -5,9 +5,9 @@ $colorE: #b7b1a4;
 
 $font: courier-std, monospace;
 
-@import "index";
-@import "project";
-@import "about";
+@import "_index.scss";
+@import "_project.scss";
+@import "_about.scss";
 
 html, body {
   width: 100%;

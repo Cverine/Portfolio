@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
     <?php include('components/head.html'); ?>
-    <?php include('components/script.html'); ?>
     <body>
     <?php include('components/header.html'); ?>
 
@@ -26,6 +25,6 @@
             <div class="index-footer-about"><a href="about.php"><span class="initial">A</span> propos</a></div>
         </footer>
     </div>
-
+    <script src='script/script.js'></script>
     </body>
 </html>
