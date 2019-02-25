@@ -2,6 +2,7 @@
 <html lang="fr">
 <?php
 include('components/head.html');
+include('components/script.html');
 ?>
 <body>
 <?php include('components/header.html'); ?>
@@ -40,7 +41,5 @@ include('components/head.html');
         <div class="footer-about" ><a href="index.php">Accueil</a></div>
     </footer>
 </div>
-<?php include('components/script.html'); ?>
 </body>
 </html>
-

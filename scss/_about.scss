@@ -1,0 +1,95 @@
+.about-wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto 1fr 1fr auto;
+  font-family: $font;
+  color: $colorB;
+  .about-title {
+    font-size: 3em;
+    grid-row: 1/2;
+    text-transform: uppercase;
+  }
+  .about-text {
+    width: 80%;
+    font-size: 1.5em;
+    grid-row: 2/3;
+    grid-column: 1/3;
+    margin-left: 12%;
+    margin-top: -30px;
+    a {
+      text-decoration: none;
+      padding-left: 5px;
+      padding-right: 5px;
+      color: $colorA;
+      background-color: $colorE;
+    }
+    a:hover {
+      background-color: $colorD;
+    }
+    span {
+      color: $colorD;
+    }
+  }
+  .contact-title {
+    font-size: 3em;
+    grid-row: 3/4;
+    grid-column: 1/2;
+    text-transform: uppercase;
+  }
+  .contact-text {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    transform: rotate(-90deg);
+    margin-left: 60%;
+    padding-bottom: 50px;
+    li {
+      list-style-type: none;
+      line-height: 70px;
+    }
+    a {
+      text-decoration: none;
+      color: $colorB;
+      font-size: 2em;
+    }
+    a:hover {
+      font-weight: 800;
+    }
+    i {
+      transform: rotate(90deg);
+      color: $colorD;
+    }
+  }
+  .email {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    ul {
+      position: absolute;
+      bottom: 100px;
+    }
+    li {
+      list-style-type: none;
+    }
+    i {
+      color: $colorD;
+    }
+    .to-copy {
+      font-size: 2em;
+    }
+
+    .tooltip {
+      opacity: 0;
+    }
+
+    .to-copy:hover {
+      ~ .tooltip {
+        opacity: 1;
+        color: $colorA;
+        background-color: $colorD;
+        font-size: 1em;
+        text-align: center;
+
+      }
+    }
+  }
+}

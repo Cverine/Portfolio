@@ -4,9 +4,8 @@
     <?php include('components/script.html'); ?>
     <body>
     <?php include('components/header.html'); ?>
-    <div id="cursor"></div>
+
     <div id="home-wrapper" class="">
-        <div class="cursor"></div>
         <div class="blinking">S</div>
         <div class="transparent">
             <span class="hidden-initial">S</span>éverine
