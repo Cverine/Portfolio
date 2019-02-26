@@ -2,7 +2,7 @@
   font-family: courier-std, monospace;
   font-weight: 600;
   font-style: normal;
-  font-size: 150px;
+  font-size: 120px;
   line-height: 90%; }
 
 #home-wrapper {
@@ -225,7 +225,7 @@ html, body {
 h1 {
   display: none; }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 767px) {
   .transparent, .blinking, .index-footer, .footer {
     font-size: 2em;
     line-height: 2; }
@@ -246,9 +246,9 @@ h1 {
       width: 100%; }
   .projects-description {
     grid-column: 1 / 2;
-    height: 80%;
-    width: 95%;
-    margin: auto;
+    height: 100%;
+    width: 100%;
+    margin-top: 0;
     text-align: center; }
     .projects-description h2 {
       font-size: 1.5em; }
@@ -307,10 +307,10 @@ h1 {
       .about-wrapper .email .to-copy {
         font-size: 1.2em; } }
 
-@media (min-width: 768px) and (max-width: 1200px) {
+@media (min-width: 768px) and (max-width: 1280px) {
   .transparent, .blinking, .index-footer, .footer {
-    font-size: 3em;
-    line-height: 2; }
+    font-size: 90px;
+    line-height: 1; }
   .transparent, .index-footer-about a, .index-footer-projects a {
     color: #05161E; }
   .project-wrapper {
